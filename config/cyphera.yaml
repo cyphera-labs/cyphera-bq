@@ -1,0 +1,17 @@
+policies:
+  ssn:
+    engine: ff1
+    alphabet: digits
+    key_ref: demo-key
+  credit_card:
+    engine: ff1
+    alphabet: digits
+    key_ref: demo-key
+  name:
+    engine: ff1
+    alphabet: alpha_lower
+    key_ref: demo-key
+
+keys:
+  demo-key:
+    material: "2B7E151628AED2A6ABF7158809CF4F3C"

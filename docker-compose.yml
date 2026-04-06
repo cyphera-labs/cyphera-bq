@@ -1,0 +1,9 @@
+services:
+  cyphera:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - CYPHERA_POLICY_FILE=/etc/cyphera/cyphera.yaml
+    volumes:
+      - ./config/cyphera.yaml:/etc/cyphera/cyphera.yaml:ro
