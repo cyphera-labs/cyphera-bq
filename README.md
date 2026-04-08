@@ -4,8 +4,7 @@ Format-preserving encryption for BigQuery via Remote UDFs.
 
 A high-performance Go HTTP server that BigQuery calls as a Remote Function. Deployable to Cloud Run or as a local Docker container.
 
-> **Note**: Currently uses a dummy (reversible shift) cipher as a placeholder.
-> Real FF1 FPE will be wired in via `cyphera-go`.
+Built on [`cyphera-go`](https://github.com/cyphera-labs/cyphera-go).
 
 ## Quick Start (Local)
 
@@ -27,7 +26,7 @@ Then run the DDL in `bq_setup.sql` to create the BQ remote functions.
 
 ```sql
 SELECT cyphera_protect('ssn', '123-45-6789');
-SELECT cyphera_unprotect('ssn', cyphera_protect('ssn', '123-45-6789'));
+SELECT cyphera_access('ssn', cyphera_protect('ssn', '123-45-6789'));
 ```
 
 ## HTTP API
