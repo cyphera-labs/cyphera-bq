@@ -25,8 +25,13 @@ Then run the DDL in `bq_setup.sql` to create the BQ remote functions.
 ## Usage in BigQuery
 
 ```sql
+-- Protect with a named policy
 SELECT cyphera_protect('ssn', '123-45-6789');
-SELECT cyphera_access('ssn', cyphera_protect('ssn', '123-45-6789'));
+-- → 'T01948-37-2150' (tagged, format preserved)
+
+-- Access — tag tells Cyphera which policy to use, no policy name needed
+SELECT cyphera_access(cyphera_protect('ssn', '123-45-6789'));
+-- → '123-45-6789'
 ```
 
 ## HTTP API
