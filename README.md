@@ -1,5 +1,9 @@
 # cyphera-bq
 
+[![CI](https://github.com/cyphera-labs/cyphera-bq/actions/workflows/ci.yml/badge.svg)](https://github.com/cyphera-labs/cyphera-bq/actions/workflows/ci.yml)
+[![Security](https://github.com/cyphera-labs/cyphera-bq/actions/workflows/codeql.yml/badge.svg)](https://github.com/cyphera-labs/cyphera-bq/actions/workflows/codeql.yml)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
+
 Format-preserving encryption for BigQuery via Remote UDFs.
 
 A high-performance Go HTTP server that BigQuery calls as a Remote Function. Deployable to Cloud Run or as a local Docker container.
